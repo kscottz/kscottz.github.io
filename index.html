@@ -14,20 +14,52 @@
           font-size: 72;
           color: #22314E;
         }
-      p, a, th, td{
+      .distro-section
+      {
           font-family: 'Overpass', sans-serif;
-          color: #22314E;
           text-decoration: none;
+          background: #22314E;
+          color:#FFFFFF;
       }
-      caption{
-          font-family: 'Overpass', sans-serif;
-          color: #22314E;
-          font-size 48px;
+      .distro-section a{
+          color: #FFFFFF;
+          text-decoration: none;
+          font-weight: normal;
       }
-      img{
-          border-radius: 20px;
+      .distro-section a:hover{
+          color: #AAAAAA;
+          text-decoration: none;
+          font-weight: normal;
       }
 
+      .distro-header
+      {
+          padding: 10px;
+          text-align: center;
+          width: 100%;
+          font-size: 28px;
+      }
+      .distro-img{
+          border-radius: 20px;
+          height: 300px;
+      }
+      .distro-container{
+          display: flex;
+          width: 100%;
+          padding: 20px;
+          justify-content: space-evenly;
+          flex-direction: row;
+          flex-wrap: nowrap;
+      }
+
+      .distro{
+          justify-content:center;
+          text-align:center;
+      }
+
+      .distro-rec{
+          font-size: 20px;
+      }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
@@ -44,38 +76,47 @@
       <br>
       <h1>Documentation</h1>
       <p>This site contains documentation for ROS 1 and ROS 2 distributions.  Select your distribution below.</p>
-      <table border="0" cellspacing="20" cellpadding="2">
-        <caption>
-          <b>Active ROS 2 distributions</b>
-        </caption>
-        <thead>
-          <th>Recommended (LTS)</th>
-          <th>Recommended (latest)</th>
-          <th>Development</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="vertical-align:center">
-              <a href="en/humble">
-                <img alt="Humble Hawksbill" src="http://docs.ros.org/.artwork/distributions/humble/HumbleHawksbill.png" title="Humble Hawksbill" height="220" />
-              </a>
-            </td>
-            <td style="vertical-align:center">
-              <a href="en/iron">
-                <img alt="Iron Irwini" src="http://docs.ros.org/.artwork/distributions/iron/IronIrwini_lowres.jpg" title="Iron Irwini" height="220" />
-              </a>
-            </td>
-            <td style="vertical-align:center">
-              <a href="en/rolling">
-                <img alt="Rolling Ridley" src="http://docs.ros.org/.artwork/distributions/rolling/rolling.png" title="Rolling Ridley" height="220" />
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    </center>
 
-      <br/>
-
+    <div class="distro-section">
+      <div class="distro-header">
+        <h2>Active ROS 2 Distributions</h2>
+      </div>
+      <div class="distro-container">
+        <div class="distro">
+          <a href="en/humble">
+            <img class="distro-img" alt="Humble Hawksbill" src="http://docs.ros.org/.artwork/distributions/humble/HumbleHawksbill.png" title="Humble Hawksbill" />
+          </a>
+          <p class="distro-rec">Recommended</p>
+          <p class="distro-rec">Long term support ROS relase.</p>
+          <a href="https://www.ros.org/reps/rep-2000.html#humble-hawksbill-may-2022-may-2027">
+            <p class="distro-support">[platform support information]</p>
+          </a>
+        </div>
+        <div class="distro">
+          <a href="en/iron">
+            <img class="distro-img" alt="Iron Irwini" src="http://docs.ros.org/.artwork/distributions/iron/IronIrwini_lowres.jpg" title="Iron Irwini"  />
+          </a>
+          <p class="distro-rec">Recommended</p>
+          <p class="distro-rec">Latest ROS 2 release</p>
+          <a href="https://www.ros.org/reps/rep-2000.html#iron-irwini-may-2023-november-2024">
+            <p class="distro-support">[platform support information]</p>
+          </a>
+        </div>
+        <div class="distro">
+          <a href="en/rolling">
+            <img class="distro-img" alt="Rolling Ridley" src="http://docs.ros.org/.artwork/distributions/rolling/rolling.png" title="Rolling Ridley" />
+          </a>
+          <p class="distro-rec">   .</p>
+          <p class="distro-rec">The bleeding edge of ROS 2</p>
+          <a href="https://www.ros.org/reps/rep-2000.html#rolling-ridley-june-2020-ongoing">
+            <p class="distro-support">[platform support information]</p>
+          </a>
+        </div>
+      </div>
+    </div>
+<!---
+        <br>
       <table border="0" cellspacing="20" cellpadding="2">
         <caption>
           <b>Active ROS 1 distributions</b>
@@ -167,7 +208,6 @@
           </tr>
         </tbody>
       </table>
-    </center>
-
+-->
   </body>
 </html>
