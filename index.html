@@ -60,6 +60,44 @@
       .distro-rec{
           font-size: 20px;
       }
+
+      .old-distro-section
+      {
+          font-family: 'Overpass', sans-serif;
+          text-decoration: none;
+          background: #FFFFFF;
+          color:#22314E;
+      }
+      .old-distro-section a{
+          color: #22314E;
+          text-decoration: none;
+          font-weight: normal;
+      }
+      .old-distro-section a:hover{
+          color: #AAAAAA;
+          text-decoration: none;
+          font-weight: normal;
+      }
+      .old-distro-header
+      {
+          text-align: center;
+          width: 100%;
+          font-size: 20px;
+      }
+      .old-distro-container{
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
+          flex-direction: row;
+          font-size: 16px;
+          flex-wrap: wrap;
+      }
+      .old-distro{
+          padding: 20px;
+          justify-content:center;
+          text-align:center;
+      }
+
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
@@ -73,14 +111,11 @@
   <body>
     <center>
       <img src="http://docs.ros.org/.artwork/ros_logo.svg">
-      <br>
-      <h1>Documentation</h1>
-      <p>This site contains documentation for ROS 1 and ROS 2 distributions.  Select your distribution below.</p>
     </center>
-
+    <br>
     <div class="distro-section">
       <div class="distro-header">
-        <h2>Active ROS 2 Distributions</h2>
+        <h2>Documentation for ROS 2 Distributions</h2>
       </div>
       <div class="distro-container">
         <div class="distro">
@@ -115,99 +150,92 @@
         </div>
       </div>
     </div>
-<!---
-        <br>
-      <table border="0" cellspacing="20" cellpadding="2">
-        <caption>
-          <b>Active ROS 1 distributions</b>
-        </caption>
-        <thead>
-          <th>Recommended</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/noetic">
-                <img alt="Noetic Ninjemys" src="http://docs.ros.org/.artwork/distributions/noetic.png" title="Noetic Ninjemys" height="220" />
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
-      <table border="0" cellspacing="20" cellpadding="2">
-        <caption>
-          <b>End-of-life ROS 2 distributions</b>
-        </caption>
-        <tbody>
-          <tr>
-            <td style="vertical-align:top">
-              Ardent Apalone
-            </td>
-            <td style="vertical-align:top">
-              Bouncy Bolson
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://docs.ros.org/en/crystal">Crystal Clemmys</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://docs.ros.org/en/dashing">Dashing Diademata</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://docs.ros.org/en/eloquent">Eloquent Elusor</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://docs.ros.org/en/foxy">Foxy Fitzroy</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://docs.ros.org/en/galactic">Galactic Geochelone</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="old-distro-section">
+      <div class="old-distro-header">
+        <h2>Documentation for End-of-Life ROS 2 Distributions</h2>
+      </div>
+      <div class="old-distro-container">
+        <div class="old-distro">
+          Ardent Apalone
+        </div>
+        <div class="old-distro">
+          Bouncy Bolson
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/crystal">Crystal Clemmys</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/dashing">Dashing Diademata</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/eloquent">Eloquent Elusor</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/foxy">Foxy Fitzroy</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/galactic">Galactic Geochelone</a>
+        </div>
+      </div>
+    </div>
 
-      <table border="0" cellspacing="20" cellpadding="2">
-        <caption>
-          <b>End-of-life ROS 1 distributions</b>
-        </caption>
-        <tbody>
-          <tr>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/cturtle">C Turtle</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/diamondback">Diamondback</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/electric">Electric Emys</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/fuerte">Fuerte Turtle</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/groovy">Groovy Galapagos</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/hydro">Hydro Medusa</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/indigo">Indigo Igloo</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/jade">Jade Turtle</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/kinetic">Kinetic Kame</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/lunar">Lunar Loggerhead</a>
-            </td>
-            <td style="vertical-align:top">
-              <a href="https://wiki.ros.org/melodic">Melodic Morenia</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
--->
+     <div class="distro-section">
+      <div class="distro-header">
+        <h2>Documentation for ROS 1 Distributions</h2>
+      </div>
+      <div class="distro-container">
+        <div class="distro">
+          <a href="https://wiki.ros.org/noetic">
+            <img alt="Noetic Ninjemys" class="distro-img" src="http://docs.ros.org/.artwork/distributions/noetic.png" title="Noetic Ninjemys" />
+          </a>
+          <p class="distro-rec">Recommended</p>
+          <p class="distro-rec">Final ROS 1 Release</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="old-distro-section">
+      <div class="old-distro-header">
+        <h2>Documentation for End-of-Life ROS 1 Distributions</h2>
+      </div>
+      <div class="old-distro-container">
+        
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/cturtle">C Turtle</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/diamondback">Diamondback</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/electric">Electric Emys</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/fuerte">Fuerte Turtle</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/groovy">Groovy Galapagos</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/hydro">Hydro Medusa</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/indigo">Indigo Igloo</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/jade">Jade Turtle</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/kinetic">Kinetic Kame</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/lunar">Lunar Loggerhead</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://wiki.ros.org/melodic">Melodic Morenia</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
