@@ -9,27 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap" rel="stylesheet">
     <style>
-      h1{
+      .header-bar
+      {
+          width: 100%;
           font-family: 'Overpass', sans-serif;
-          font-size: 72;
-          color: #22314E;
-        }
+          text-decoration: none;
+          background: #FFFFFF;
+          color:#22314E;
+          align-content:center;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      .header-img
+      {
+          align: center;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
       .distro-section
       {
           font-family: 'Overpass', sans-serif;
           text-decoration: none;
           background: #22314E;
           color:#FFFFFF;
+          font-size: 1rem;
+          height: 60%;
       }
       .distro-section a{
           color: #FFFFFF;
           text-decoration: none;
           font-weight: normal;
+          font-size: 1  em;
       }
       .distro-section a:hover{
           color: #AAAAAA;
           text-decoration: none;
           font-weight: normal;
+          font-size: 1  em;
       }
 
       .distro-header
@@ -37,19 +55,20 @@
           padding: 10px;
           text-align: center;
           width: 100%;
-          font-size: 28px;
+          font-size: 1.6rem;
       }
       .distro-img{
+          margin: 30px;
           border-radius: 20px;
-          height: 300px;
+          height: 20vh;
       }
       .distro-container{
+          text-align:center;
           display: flex;
-          width: 100%;
-          padding: 20px;
-          justify-content: space-evenly;
-          flex-direction: row;
-          flex-wrap: nowrap;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-content:center;
+          vertical-align: middle;
       }
 
       .distro{
@@ -58,23 +77,29 @@
       }
 
       .distro-rec{
-          font-size: 20px;
+          font-size: 1 em;
       }
-
+      .distro-support{
+          font-size: 1 em;
+      }
       .old-distro-section
       {
           font-family: 'Overpass', sans-serif;
           text-decoration: none;
           background: #FFFFFF;
           color:#22314E;
+          width: 100%;
+          height: 25%;
       }
       .old-distro-section a{
           color: #22314E;
+          font-size: 0.8 rem;
           text-decoration: none;
           font-weight: normal;
       }
       .old-distro-section a:hover{
           color: #AAAAAA;
+          font-size: 0.8 rem;
           text-decoration: none;
           font-weight: normal;
       }
@@ -82,18 +107,18 @@
       {
           text-align: center;
           width: 100%;
-          font-size: 20px;
+          font-size: 1.3rem;
       }
       .old-distro-container{
           display: flex;
           width: 100%;
           justify-content: space-evenly;
-          flex-direction: row;
-          font-size: 16px;
-          flex-wrap: wrap;
+          flex-flow: row wrap;
+          padding: 2 rem;
+          margin: 2 rem;
       }
       .old-distro{
-          padding: 20px;
+          padding: 1rem;
           justify-content:center;
           text-align:center;
       }
@@ -109,88 +134,86 @@
     </script>
   </head>
   <body>
-    <center>
-      <img src="http://docs.ros.org/.artwork/ros_logo.svg">
-    </center>
+    <div class="header-bar">
+      <img src="http://docs.ros.org/.artwork/ros_logo.svg" class="header-img">
+    </div>
     <br>
     <div class="distro-section">
       <div class="distro-header">
-        <h2>Documentation for ROS 2 Distributions</h2>
+        <h2>Documentation for Active ROS Distributions</h2>
       </div>
       <div class="distro-container">
         <div class="distro">
           <a href="en/humble">
             <img class="distro-img" alt="Humble Hawksbill" src="http://docs.ros.org/.artwork/distributions/humble/HumbleHawksbill.png" title="Humble Hawksbill" />
           </a>
-          <p class="distro-rec">Recommended</p>
-          <p class="distro-rec">Long term support ROS relase.</p>
-          <a href="https://www.ros.org/reps/rep-2000.html#humble-hawksbill-may-2022-may-2027">
-            <p class="distro-support">[platform support information]</p>
-          </a>
+          <br>
+          <span class="distro-rec">
+            Recommended
+          </span>
+          <br>
+          <span class="distro-rec">LTS ROS 2 Release</span>
+          <br>
+          <span class="distro-support">
+            <a href="https://www.ros.org/reps/rep-2000.html#humble-hawksbill-may-2022-may-2027">
+              [platform support]
+            </a>
+          </span>
         </div>
         <div class="distro">
           <a href="en/iron">
             <img class="distro-img" alt="Iron Irwini" src="http://docs.ros.org/.artwork/distributions/iron/IronIrwini_lowres.jpg" title="Iron Irwini"  />
           </a>
-          <p class="distro-rec">Recommended</p>
-          <p class="distro-rec">Latest ROS 2 release</p>
-          <a href="https://www.ros.org/reps/rep-2000.html#iron-irwini-may-2023-november-2024">
-            <p class="distro-support">[platform support information]</p>
-          </a>
+          <br>
+          <span class="distro-rec">
+            Recommended
+          </span>
+          <br>
+          <span class="distro-rec">Latest ROS 2 Release</span>
+          <br>
+          <span class="distro-support">
+            <a href="https://www.ros.org/reps/rep-2000.html#iron-irwini-may-2023-november-2024">
+              [platform support]
+            </a>
+          </span>
         </div>
         <div class="distro">
           <a href="en/rolling">
             <img class="distro-img" alt="Rolling Ridley" src="http://docs.ros.org/.artwork/distributions/rolling/rolling.png" title="Rolling Ridley" />
           </a>
-          <p class="distro-rec">   .</p>
-          <p class="distro-rec">The bleeding edge of ROS 2</p>
-          <a href="https://www.ros.org/reps/rep-2000.html#rolling-ridley-june-2020-ongoing">
-            <p class="distro-support">[platform support information]</p>
-          </a>
+          <br>
+          <span class="distro-rec">
+          &nbsp;
+          </span>
+          <br>
+          <span class="distro-rec">
+            Development ROS 2 Release
+          </span>
+          <br>
+          <span class="distro-support">
+            <a href="https://www.ros.org/reps/rep-2000.html#rolling-ridley-june-2020-ongoing">
+              [platform support]
+            </a>
+          </span>
         </div>
-      </div>
-    </div>
-
-    <div class="old-distro-section">
-      <div class="old-distro-header">
-        <h2>Documentation for End-of-Life ROS 2 Distributions</h2>
-      </div>
-      <div class="old-distro-container">
-        <div class="old-distro">
-          Ardent Apalone
-        </div>
-        <div class="old-distro">
-          Bouncy Bolson
-        </div>
-        <div class="old-distro">
-          <a href="https://docs.ros.org/en/crystal">Crystal Clemmys</a>
-        </div>
-        <div class="old-distro">
-          <a href="https://docs.ros.org/en/dashing">Dashing Diademata</a>
-        </div>
-        <div class="old-distro">
-          <a href="https://docs.ros.org/en/eloquent">Eloquent Elusor</a>
-        </div>
-        <div class="old-distro">
-          <a href="https://docs.ros.org/en/foxy">Foxy Fitzroy</a>
-        </div>
-        <div class="old-distro">
-          <a href="https://docs.ros.org/en/galactic">Galactic Geochelone</a>
-        </div>
-      </div>
-    </div>
-
-     <div class="distro-section">
-      <div class="distro-header">
-        <h2>Documentation for ROS 1 Distributions</h2>
-      </div>
-      <div class="distro-container">
         <div class="distro">
           <a href="https://wiki.ros.org/noetic">
             <img alt="Noetic Ninjemys" class="distro-img" src="http://docs.ros.org/.artwork/distributions/noetic.png" title="Noetic Ninjemys" />
           </a>
-          <p class="distro-rec">Recommended</p>
-          <p class="distro-rec">Final ROS 1 Release</p>
+          <br>
+          <span class="distro-rec">
+          Recommended
+          </span>
+          <br>
+          <span class="distro-rec">
+            LTS ROS 1 release
+          </span>
+          <br>
+          <span class="distro-support">
+            <a href="https://www.ros.org/reps/rep-2000.html#rolling-ridley-june-2020-ongoing">
+              [platform support]
+            </a>
+          </span>
         </div>
       </div>
     </div>
@@ -198,10 +221,54 @@
 
     <div class="old-distro-section">
       <div class="old-distro-header">
-        <h2>Documentation for End-of-Life ROS 1 Distributions</h2>
+        <h2>Documentation for End-of-Life ROS Distributions</h2>
       </div>
       <div class="old-distro-container">
-        
+        <div class="old-distro">
+          Ardent Apalone (ROS 2)
+        </div>
+        <div class="old-distro">
+          Bouncy Bolson (ROS 2)
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/crystal">Crystal Clemmys (ROS 2)</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/dashing">Dashing Diademata (ROS 2)</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/eloquent">Eloquent Elusor (ROS 2)</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/foxy">Foxy Fitzroy (ROS 2)</a>
+        </div>
+        <div class="old-distro">
+          <a href="https://docs.ros.org/en/galactic">Galactic Geochelone (ROS 2)</a>
+        </div>
+    <!--   </div> -->
+    <!-- </div> -->
+
+    <!--  <div class="distro-section"> -->
+    <!--   <div class="distro-header"> -->
+    <!--     <h2>Documentation for ROS 1 Distributions</h2> -->
+    <!--   </div> -->
+    <!--   <div class="distro-container"> -->
+    <!--     <div class="distro"> -->
+    <!--       <a href="https://wiki.ros.org/noetic"> -->
+    <!--         <img alt="Noetic Ninjemys" class="distro-img" src="http://docs.ros.org/.artwork/distributions/noetic.png" title="Noetic Ninjemys" /> -->
+    <!--       </a> -->
+    <!--       <p class="distro-rec">Recommended</p> -->
+    <!--       <p class="distro-rec">Final ROS 1 Release</p> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+<!-- <br> -->
+<!--     <div class="old-distro-section"> -->
+<!--       <\!-- <div class="old-distro-header"> -\-> -->
+<!--       <\!--   <h2>Documentation for End-of-Life ROS 1 Distributions</h2> -\-> -->
+<!--       <\!-- </div> -\-> -->
+<!--       <div class="old-distro-container"> -->
         <div class="old-distro">
           <a href="https://wiki.ros.org/cturtle">C Turtle</a>
         </div>
